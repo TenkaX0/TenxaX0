@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: rgb(19, 15, 15);
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2rem;
+    color: brown;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 2rem;
+    color: white;
+    margin-left: 3rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    z-index: 100;
+}
+
+nav a:hover,
+nav a.active{
+    color: red;
+    border-bottom: 3px solid red;
+
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0%;
+        right: 0%;
+        width: 40%;
+        border-left: 3px solid red;
+        border-bottom: 3px solid red;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: black;
+        border-top: 0.1rem solid rgba(0,0,0,1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid red;
+        }
+    }
+
+    section{
+        min-height: 100vh;
+        padding: 5rem 9% 5rem;
+    }
+
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        background-color: black;
+    }
+
+    .home .home-content h1{
+        font-size: 7rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    
+    section{
+        scroll-margin-top: 8rem;
+    }
+
+    span{
+        color: red;
+    }
+
+    .home-content h3{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .home-img{
+        border-radius: 50%;
+    }
+
+    .home-img img{
+        position: relative;
+        width: 22vw;
+        border-radius: 50%;
+        box-shadow:0 0 25px solid red;
+        cursor: pointer;
+        transition: 0.2 linear;
+    }
+
+    .home-img img:hover{
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .social-icons a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: 0.2rem solid red;
+        font-size: 2rem;
+        border-radius: 50%;
+        margin: 3rem 1.5rem 3rem;
+        transition: 0.3s ease;
+        color: white    ;
+    }
+
+    .social-icons a:hover{
+        color: black;
+        transform: scale(1.3) translateY(-5px);
+        background-color: red;
+        box-shadow: 0 0 25px red;
+    }
+
+    .typing-text{
+        position: relative;
+    }
+
+    .typing-text span::before{
+        content: "Web Developer";
+        color: #b74b4b;
+        animation: words 20s infinite;
+    }
+
+    .typing-text span::after{
+        content: "";
+        background-color: black;
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        border-left: 3px solid black;
+        border-left: 3px solid;
+        right: -8;
+        animation: cursor 0.6s infinite;
+    }
+
+    @keyframes cursor{
+        to{
+            border-left: 3px solid red;
+        }
+    }
+
+    @keyframes words{
+        0%, 20%{
+            content: "Web Developer";
+        }
+    }
+
+    @media (max-width: 1000px){
+        .home{
+            gap: 4rem;
+        }
+    }
+
+    @media (max-width:995px){
+        .home{
+            flex-direction: column;
+            margin: 5rem 4rem;
+        }
+    
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vh;
+        margin: 4rem;
+    }
+}
+
+
+  
+    .service {
+        
+        
+        padding: 4rem 0;
+        background: #000000;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .service .heading {
+        
+        text-align: center;
+        font-size: 4rem;
+        text-transform: capitalize;
+        color: #ffffff;
+        margin-bottom: 1.25rem;
+        position: relative;
+    }
+    .service .heading::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: #ff0000;
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    .service-container {
+        color: black;
+        max-width: 1100px;
+        margin: 2rem auto 0;
+        padding: 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .service-box {
+        background: #000000;
+        border-radius: 12px;
+        padding: 1.6rem;
+        box-shadow: 0 6px 18px rgba(28, 34, 46, 0.06);
+        transition: transform .22s ease, box-shadow .22s ease;
+        display: flex;
+        align-items: flex-start;
+        min-height: 140px;
+    }
+
+    .service-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 36px rgba(28, 34, 46, 0.12);
+    }
+
+    .service-info h4 {
+        font-size: 3rem;
+        color: #ffffff;
+        margin: 0 0 0.5rem;
+        letter-spacing: 0.2px;
+    }
+
+    .service-info p {
+        margin: 0;
+        color: #ffffff;
+        line-height: 1.6;
+        font-size: 2rem;
+    }
+
+    .service-info p span{
+        padding: 43%;
+    }
+
+    
+    @media (max-width: 480px) {
+        .service { padding: 2.5rem 0; }
+        .service .heading { font-size: 1.4rem; }
+        .service-box { padding: 1.1rem; }
+    }
+
+.skills{
+    background: var(--bg-color);
+}
+
+.skills .heading {
+        
+        text-align: center;
+        font-size: 4rem;
+        text-transform: capitalize;
+        color: #ffffff;
+        margin-bottom: 1.25rem;
+        position: relative;
+    }
+
+.skills .container{
+    background: rgba(46, 5, 5, 0.473);
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.skills .container .row{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
+.skills .container .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: var(--bg-color);
+    transition: 0.3 ease;
+}
+
+.skills .container .bar:hover{
+    box-shadow: 0 4px 10px var(--main-color);
+    transform: scale(1.03);
+}
+
+.skills .container .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills .container .bar .info span{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+    
+@media (max-width: 480px) {
+.skill { padding: 2.5rem 0; }
+.skill .heading { font-size: 1.4rem; }
+.skill-box { padding: 1.1rem; }
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.contact .heading {
+        
+        text-align: center;
+        font-size: 4rem;
+        text-transform: capitalize;
+        color: #ffffff;
+        margin-bottom: 1.25rem;
+        position: relative;
+    }
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+}
